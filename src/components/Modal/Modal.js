@@ -10,9 +10,9 @@ function Modal({ open, setOpen, onAdd }) {
     birth: null,
     left: 0,
     right: 0,
-    id:nanoid(),
+    id: nanoid(),
     checkedAt: new Date().toLocaleDateString(),
-    firm:""
+    firm: "",
   });
   if (!open) {
     return null;
@@ -23,9 +23,9 @@ function Modal({ open, setOpen, onAdd }) {
       onAdd(input);
       setInput({});
       setOpen(false);
-      Notify.success("Додано успішно)")
-    }else{
-        Notify.failure("Не всі поля заповнені")
+      Notify.success("Додано успішно)");
+    } else {
+      Notify.failure("Не всі поля заповнені");
     }
   };
 
@@ -71,23 +71,73 @@ function Modal({ open, setOpen, onAdd }) {
         </label>
         <label>
           Ліве око{" "}
-          <input
-            type="number"
-            value={input.left}
-            onInput={(e) => {
-              setInput({ ...input, left: e.target.value });
-            }}
-          />
+          <ul>
+            <li>
+              Сфера:
+              <input
+                type="number"
+                value={input.left.ball}
+                onInput={(e) => {
+                  setInput({ ...input, left: {...input.left, ball: e.target.value} });
+                }}
+              />
+            </li>
+            <li>
+              Цилінд:
+              <input
+                type="number"
+                value={input.left.cylinder}
+                onInput={(e) => {
+                  setInput({ ...input, left: {...input.left, cylinder: e.target.value} });
+                }}
+              />
+            </li>
+            <li>
+              Вісь:
+              <input
+                type="number"
+                value={input.left.axis}
+                onInput={(e) => {
+                  setInput({ ...input, left: {...input.left, axis: e.target.value} });
+                }}
+              />
+            </li>
+          </ul>
         </label>
         <label>
           Праве око{" "}
-          <input
-            type="number"
-            value={input.right}
-            onInput={(e) => {
-              setInput({ ...input, right: e.target.value });
-            }}
-          />
+          <ul>
+            <li>
+              Сфера:
+              <input
+                type="number"
+                value={input.right.ball}
+                onInput={(e) => {
+                  setInput({ ...input, right: {...input.right, ball: e.target.value} });
+                }}
+              />
+            </li>
+            <li>
+              Цилінд:
+              <input
+                type="number"
+                value={input.right.cylinder}
+                onInput={(e) => {
+                  setInput({ ...input, right: {...input.right, cylinder: e.target.value} });
+                }}
+              />
+            </li>
+            <li>
+              Вісь:
+              <input
+                type="number"
+                value={input.right.axis}
+                onInput={(e) => {
+                  setInput({ ...input, right: {...input.right, axis: e.target.value} });
+                }}
+              />
+            </li>
+          </ul>
         </label>
         <label>
           Фірма{" "}
