@@ -6,7 +6,6 @@ import Modal from "./Modal/Modal";
 export const App = () => {
   const [patients, setPatients] = useState(JSON.parse(localStorage.getItem("patients")));
   if (!patients) setPatients([]);
-  if(patients.length===0)setPatients([{name:"Oleg", left:10, right:5}]);
   const [modalOpen, setModalOpen] = useState(false);
   const [filter, setFilter] = useState("");
   const [filtered, setFiltered] = useState([]);
