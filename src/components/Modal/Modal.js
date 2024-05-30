@@ -3,7 +3,7 @@ import "./style.css";
 import { Notify } from "notiflix";
 import { nanoid } from "nanoid";
 
-function Modal({ open, setOpen, onAdd }) {
+function Modal({ open, setOpen, onAdd, patient }) {
   const [input, setInput] = useState({
     name: "",
     surname: "",
@@ -13,6 +13,7 @@ function Modal({ open, setOpen, onAdd }) {
     id: nanoid(),
     checkedAt: new Date().toLocaleDateString(),
     firm: "",
+    ...patient
   });
   if (!open) {
     return null;
@@ -40,7 +41,7 @@ function Modal({ open, setOpen, onAdd }) {
       }}
     >
       <form onSubmit={onSubmit}>
-        <h1>Додати користувача</h1>
+        <h1>{patient ? "Редагувати":"Додати"} користувача</h1>
         <label>
           Ім'я{" "}
           <input
@@ -148,7 +149,7 @@ function Modal({ open, setOpen, onAdd }) {
             }}
           />
         </label>
-        <button>Додати</button>
+        <button>{patient ? "Редагувати":"Додати"}</button>
       </form>
     </div>
   );
