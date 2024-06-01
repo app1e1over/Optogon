@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Optogon/static/css/main.1a6ea1e8.css",
-    "main.js": "/Optogon/static/js/main.e0895b44.js",
+    "main.css": "/Optogon/static/css/main.de8a5a7e.css",
+    "main.js": "/Optogon/static/js/main.56fa55a0.js",
     "index.html": "/Optogon/index.html",
-    "main.1a6ea1e8.css.map": "/Optogon/static/css/main.1a6ea1e8.css.map",
-    "main.e0895b44.js.map": "/Optogon/static/js/main.e0895b44.js.map"
+    "main.de8a5a7e.css.map": "/Optogon/static/css/main.de8a5a7e.css.map",
+    "main.56fa55a0.js.map": "/Optogon/static/js/main.56fa55a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a6ea1e8.css",
-    "static/js/main.e0895b44.js"
+    "static/css/main.de8a5a7e.css",
+    "static/js/main.56fa55a0.js"
   ]
 }
