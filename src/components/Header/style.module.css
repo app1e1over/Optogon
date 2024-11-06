@@ -1,6 +1,6 @@
 .head{
     display: flex;
-    background-color: #739072;
+    background-color: var(--color2);
     padding: 20px;
     gap: 10px;
 }
@@ -11,5 +11,5 @@
     cursor: pointer;
 }
 .item:hover{
-    color: #ACE1AF;
+    color: var(--color3);
 }

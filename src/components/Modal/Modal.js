@@ -22,7 +22,7 @@ function Modal({ open, setOpen, onAdd, patient }) {
     e.preventDefault();
     if (input.name && input.surname && input.birth) {
       onAdd(input);
-      setInput({});
+      setInput({right:{}, left:{}});
       setOpen(false);
       Notify.success("Додано успішно)");
     } else {
@@ -71,41 +71,6 @@ function Modal({ open, setOpen, onAdd, patient }) {
           />
         </label>
         <label>
-          Ліве око{" "}
-          <ul>
-            <li>
-              Сфера:
-              <input
-                type="number"
-                value={input.left.ball}
-                onInput={(e) => {
-                  setInput({ ...input, left: {...input.left, ball: e.target.value} });
-                }}
-              />
-            </li>
-            <li>
-              Цилінд:
-              <input
-                type="number"
-                value={input.left.cylinder}
-                onInput={(e) => {
-                  setInput({ ...input, left: {...input.left, cylinder: e.target.value} });
-                }}
-              />
-            </li>
-            <li>
-              Вісь:
-              <input
-                type="number"
-                value={input.left.axis}
-                onInput={(e) => {
-                  setInput({ ...input, left: {...input.left, axis: e.target.value} });
-                }}
-              />
-            </li>
-          </ul>
-        </label>
-        <label>
           Праве око{" "}
           <ul>
             <li>
@@ -119,7 +84,7 @@ function Modal({ open, setOpen, onAdd, patient }) {
               />
             </li>
             <li>
-              Цилінд:
+              Циліндр:
               <input
                 type="number"
                 value={input.right.cylinder}
@@ -140,6 +105,42 @@ function Modal({ open, setOpen, onAdd, patient }) {
             </li>
           </ul>
         </label>
+        <label>
+          Ліве око{" "}
+          <ul>
+            <li>
+              Сфера:
+              <input
+                type="number"
+                value={input.left.ball}
+                onInput={(e) => {
+                  setInput({ ...input, left: {...input.left, ball: e.target.value} });
+                }}
+              />
+            </li>
+            <li>
+              Циліндр:
+              <input
+                type="number"
+                value={input.left.cylinder}
+                onInput={(e) => {
+                  setInput({ ...input, left: {...input.left, cylinder: e.target.value} });
+                }}
+              />
+            </li>
+            <li>
+              Вісь:
+              <input
+                type="number"
+                value={input.left.axis}
+                onInput={(e) => {
+                  setInput({ ...input, left: {...input.left, axis: e.target.value} });
+                }}
+              />
+            </li>
+          </ul>
+        </label>
+
         <label>
           Фірма{" "}
           <input

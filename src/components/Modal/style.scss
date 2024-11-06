@@ -4,7 +4,7 @@
     position: absolute;
     top:0;
     left: 0;
-    background-color: rgba($color: #4F6F52, $alpha: 0.4);
+    background-color: rgba($color: var(--color1), $alpha: 0.1);
     & form{
         background-color: white;
         border-radius: 24px;
@@ -16,14 +16,14 @@
     }
     & label{
         display: block;
-        color:  #ACE1AF;
+        color:  var(--color1);
         margin: 10px;
     }
     & input{
-        color:  #ACE1AF;
+        color:  var(--color2);
         background-color: transparent;
         border: none;
-        border-bottom: 1px solid #4F6F52;
+        border-bottom: 1px solid var(--color1);
     }
 }
 body .backDrop{
